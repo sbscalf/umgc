@@ -1,0 +1,24 @@
+class Train {
+	int numberOfCars;
+	void goToStation(Station station) {}
+}
+
+class PassengerTrain extends Train {
+	int numberOfPassengers;
+	void board(int numberOfPassengers) {}
+}
+
+class Maglev extends PassengerTrain {
+	double magnetStrength;
+	void startLevitation() {}
+}
+
+class Subway extends PassengerTrain {
+	double tubeDepth;
+	void resetStopSignals() {}
+}
+
+class FreightTrain extends Train {
+	bool hasHazardousMaterial;
+	void offLoad() {}
+}

@@ -1,0 +1,9 @@
+
+public class main {
+
+	public static void main(String[] args) {
+		WeatherReport report = new Summer(90, "July");
+		System.out.println(report.getTemperature() + " " + report.getMonth())
+	}
+
+}

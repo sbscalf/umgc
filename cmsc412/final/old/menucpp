@@ -1,0 +1,17 @@
+#include "menu.h"
+#include "exceptions.h"
+
+using std::string;
+
+string Menu::getMenu()
+{
+	return this->menuListing;
+}
+
+int Menu::validateChoice(string input)
+{
+	if ( !std::regex_match(input, this->validChoice) )
+		throw invalidChoice;
+	else
+		return 1;
+}

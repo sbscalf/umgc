@@ -1,0 +1,12 @@
+Scalf-Project1.pdf: Report for Project 1
+
+ScalfProject1.java: Main program file; contains the main() method.
+
+scalf: Directory structure for packaged java source files.
+
+calculator: Example GUI file from Project 1 Instructions and Rubric
+
+test1-test4: Test Case Input Files: pass to program via command-line argument.
+	Only the first argument is checked. If no argument is provided, "calculator" is used.
+	Example:
+		$ java ScalfProject1 test1

@@ -1,0 +1,32 @@
+#ifndef MENU_H_
+#define MENU_H_
+
+#include <string>
+#include <regex>
+
+class Menu
+{
+public:
+	std::string getMenu();
+	int validateChoice(std::string input);
+	void executeChoice(int choice);
+private:
+	const std::string menuListing =
+		"Demand Paging Simulator\n"
+		"-----------------------\n\n"
+		"0. Exit\n"
+		"1. Set Reference String\n"
+		"2. Generate Reference String\n"
+		"3. Display Current Reference String\n"
+		"4. Simulate FIFO\n"
+		"5. Simulate OPT\n"
+		"6. Simulate LRU\n"
+		"7. Simulate LFU\n";
+	const std::regex validChoice{"[0-7]{1}"};
+
+};
+
+#endif /* MENU_H_ */
+
+
+

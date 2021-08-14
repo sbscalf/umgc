@@ -1,0 +1,15 @@
+public class Spring extends Season {
+	
+	Spring(int temperature, String month) {
+		super(temperature, month);
+	}
+
+	int getTemperature() {
+		return this.temperature;
+	}
+
+	String getMonth() {
+		return this.month;
+	}
+
+}

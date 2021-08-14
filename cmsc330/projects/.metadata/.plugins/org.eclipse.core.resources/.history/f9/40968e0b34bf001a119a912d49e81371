@@ -1,0 +1,12 @@
+public abstract class Season {
+	private int temperature;
+	private String month;
+	
+	Season(int temperature, String month) {
+		this.temperature = temperature;
+		this.month = month;
+	}
+	
+	abstract int getTemperature();
+	abstract String getMonth();
+}

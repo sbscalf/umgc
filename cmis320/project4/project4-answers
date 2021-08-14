@@ -1,0 +1,29 @@
+1. Is this relation in at least 1NF? Why or why not?
+
+This realtion is in at least 1NF, because it satisfies the requirements for 1NF: each field of the table contains exactly one item, even if it is multiple words; each field in a column means the same thing; there are no identical tuples, as they all differ by at least one column; and there are no repeating columns.  Furthermore, we we told to assume girls with the same name are the same person, so, with no duplicate tuples, we can uniquely identify each tuple.
+
+========================================
+
+2. What is the primary key of the initial relation (assume the values shown are the only possible tuples for all time)? Remember that a primary key must be unique and not null.
+
+Since we are to assume the tuples where the GIRL name are the same are for the same person.  Multiple fields with the same value exist within the GIRL column, so it alone cannot serve as a primary key.  A primary key, or rather a composite key, consisting of the GIRL and GAME columns makes for a satisfactory primary key for this table.
+
+========================================
+
+3. Describe the _specific_ data anomalies that exist if we DELETE the tuple containing Jacqueline.
+
+If we DELETE the tuple containing Jacqueline, we lose all information about a GAME, CATEGORY, and PRICE, namely, Visual Basic, Prog. Languages, and 199.99, respectively, even though the intent was to only remove data about Jacqueline.
+
+========================================
+
+4. Draw a functional dependency diagram for the inital relation. This diagram should agree with the primary key you selected in above.
+
+
+
+========================================
+
+5. Based on your diagram, what normal form is the _initial_ relation in ? Why?
+
+========================================
+
+6. If necessary, decompose the initial relation into a set of non-loss 3NF relations by showing the relations, attributes, and tuples. Show complete relations with _attribute_headings_ and all _data_ values in the _tuples_ of your relations. Determin the number of 3NF relations you end up with _after_normalization_, _write_ this number, and the _circle_ the number.

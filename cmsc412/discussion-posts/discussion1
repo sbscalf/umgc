@@ -1,0 +1,28 @@
+Name a few operating systems that you worked on (or had contact with).
+MacOS X and ProDOS
+iOS
+Android
+Solaris
+Linux (multiple distributions)
+Windows 3.0 to Windows 10, to include MS-DOS, Client, and Server
+Various gaming consoles
+
+Describe your experience and answer comparative questions like:
+
+- Which one was the oldest / most recent?
+The oldest operating system I used was ProDOS on an Apple ][c computer. I remember playing games on 5 1/4 floppies, as well as writing programs in machine code from a big spiral book to 3 1/2 floppies. That book had something like 90 programs all in hexadecimal.  I spent many hours with that OS, and even got a taste in Quicken.
+
+The most recent operating system I use at home is Arch Linux. I've only recently started using it within the past 4 months, so there are still some things I'm learning. At work, however, I mainly deal with Windows operating systems, like Windows 10 and Windows Server.
+
+- Which one was the oddest? why?
+I think the oddest one I worked with was Solaris. As a user, I very quickly noticed, and had to become accustomed to, making sure my cursor was on the window in which I wanted to type. In other words, the active window was ALWAYS the one under the cursor. If you were typing and accidentally bumped the mouse so that it moved the cursor just off the window, you would find yourself typing where you didn't intend.
+
+- Which one was more fun? why?
+Honestly, the gaming console operating systems assisted with providing the most entertainment, but I am finding Arch Linux to be the most fun as a Desktop OS. I've taken a look at Gentoo and LinuxFromScratch, but found myself not quite ready to fully tackle them. Arch Linux is an extremely customizable Linux distribution, so I was able to start with just the bare minimum and add on only what I need, like a web browser of my own personal choice.
+
+- Which particular OS feature do you like most? why?
+I think my favorite feature of any OS is package management. Most linux distributions have program repositories from which you can download and install programs using a single command. For example, in Arch Linux, I can type `pacman -S firefox` to install firefox. Then, when it comes to updates, I can run just one single command to update all installed applications -- for Arch Linux this would be `pacman -Syu`. While this doesn't work for every single program, especially programs that require licenses, it works for most. Plus, there is usually an alternative that can take the place of the licensed software.
+Package management software has made its way to Windows in the form of chocolatey. It still has some ways to go to be comparable to Linux repositories, but its well on its way. For people who would like to use a centralized software manager in Windows, I highly recommend they take a look at chocolatey.
+
+- Which particular OS feature do you dislike most? why?
+The OS feature I dislike the most is company control, for lack of a better term. Recently, I needed to set up a computer for my son so he could access his classes remotely. This brand new Windows 10 system was in "S Mode". In this mode, you can only install applications from the Microsoft Store. This is similar to MacOS and the Apple Store. I understand you can go into settings on MacOS and allow Third-Party Apps, but in Windows 10 you had to install the "Disable S Mode" App from the Microsoft Store. I very strongly feel that I should be able to install whatever software I want on my personal computer. That feeling is one of the main reasons I've made the switch to Linux.

@@ -1,0 +1,7 @@
+public class WeatherReport {
+	private Season season;
+	
+	WeatherReport(Season season) {
+		this.season = season;
+	}
+}

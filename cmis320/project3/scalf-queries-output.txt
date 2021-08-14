@@ -1,0 +1,58 @@
+1. All customer's names account numbers, and addresses sorted by account number
+
+ACCOUNT_NUMBER LASTNAME             FIRSTNAME            STREETADDRESS                     ZIPCODE
+-------------- -------------------- -------------------- ------------------------------ ----------
+             1 Customer             First                1 Easy St.                          11111
+             2 Client               Second               2 Easy St.                          22222
+             3 Renter               Third                3 Easy St.                          33333
+             4 Consumer             Fourth               4 Easy St.                          44444
+             5 Maiden               Fifth                5 Easy St.                          55555
+
+
+2. Videos rented in last 30 days, sorted chronologically
+
+  RENTALID CUSTOMERID DATERENTE DUEDATE   DATERETUR    TAXRATE TITLE                         
+---------- ---------- --------- --------- --------- ---------- ------------------------------
+        13          3 27-MAR-21 29-MAR-21 31-MAR-21         .8 Movie3                        
+        14          4 10-APR-21 12-APR-21 17-APR-21         .8 Movie4                        
+        15          5 24-APR-21 26-APR-21                   .8 Movie5                        
+
+
+3. List of all distributor's information, sorted by company name
+
+DISTRIBUTORID DISTRIBUTO LOYALTYDISCOUNT
+------------- ---------- ---------------
+          300 Dist1                   .1
+          301 Dist2                  .05
+          302 Dist3                     
+          303 Dist4                     
+          304 Dist5                  .12
+
+
+4. Updating a customer's last name
+
+CUSTOMERID FIRSTNAME            LASTNAME             STREETADDRESS                  CITY                    ZIPCODE PHONENUMBER
+---------- -------------------- -------------------- ------------------------------ -------------------- ---------- -----------
+         5 Fifth                Maiden               5 Easy St.                     City                      55555  8005550005
+
+CUSTOMERID FIRSTNAME            LASTNAME             STREETADDRESS                  CITY                    ZIPCODE PHONENUMBER
+---------- -------------------- -------------------- ------------------------------ -------------------- ---------- -----------
+         5 Fifth                Married              5 Easy St.                     City                      55555  8005550005
+
+
+5. Deleting a customer from the database
+
+CUSTOMERID FIRSTNAME            LASTNAME             STREETADDRESS                  CITY                    ZIPCODE PHONENUMBER
+---------- -------------------- -------------------- ------------------------------ -------------------- ---------- -----------
+         1 First                Customer             1 Easy St.                     City                      11111  8005550001
+         2 Second               Client               2 Easy St.                     City                      22222  8005550002
+         3 Third                Renter               3 Easy St.                     City                      33333  8005550003
+         4 Fourth               Consumer             4 Easy St.                     City                      44444  8005550004
+         5 Fifth                Maiden               5 Easy St.                     City                      55555  8005550005
+
+CUSTOMERID FIRSTNAME            LASTNAME             STREETADDRESS                  CITY                    ZIPCODE PHONENUMBER
+---------- -------------------- -------------------- ------------------------------ -------------------- ---------- -----------
+         1 First                Customer             1 Easy St.                     City                      11111  8005550001
+         2 Second               Client               2 Easy St.                     City                      22222  8005550002
+         4 Fourth               Consumer             4 Easy St.                     City                      44444  8005550004
+         5 Fifth                Maiden               5 Easy St.                     City                      55555  8005550005

@@ -1,0 +1,12 @@
+The java.io.BufferedReader and java.io.LineNumberReader are in a parent-child relationship.  In both of these, there are overloaded methods.  An overloaded method is when the name and return type of a method is the same, but the parameter lists are different.  In BufferedReader there is an "int read()" method and an "int read(char[], int, int)" method.  Often times constructors are overloaded in this manner, with all other constructors calling the constructor with the most constructors. For example, one of BufferedReader's constructor is
+    public BufferedReader(Reader in) {
+        this(in, defaultCharBufferSize);
+    }
+Overloading methods allows methods that perform similar functions to have the same name, but allow specification.  For example, a remove() method may remove the item at index 0, whereas a remove(int index) method would the item at the specified index.
+
+Polymorphism allows programmers to make calls to methods regardless of the actual implementation.  LineNumberReader is a child of BufferedReader, which is a child of Reader.  StringReader is also a child of Reader.  A programmer could have a List of Reader objects (i.e. List<Reader>) in which at least one LineNumberReader, BufferedReader, and StringReader exist. A programmer would be able to execute each List item's "int read(char[], int, int)" method without needing to know exactly what the actual class is nor how it is implementing the method. In fact, BufferedReader and StringReader have quite different implementations, while LineNumberReader expands on BufferedReader's implementation.
+
+The implementations can be seen in their respective source files:
+- http://hg.openjdk.java.net/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/java/io/BufferedReader.java
+- http://hg.openjdk.java.net/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/java/io/LineNumberReader.java
+- http://hg.openjdk.java.net/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/java/io/StringReader.java

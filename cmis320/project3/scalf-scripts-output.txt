@@ -1,0 +1,255 @@
+
+Table CUSTOMER created.
+
+
+Table RENTAL created.
+
+
+Table FEE created.
+
+
+Table APPLIED_FEE created.
+
+
+Table MOVIE created.
+
+
+Table DISTRIBUTOR created.
+
+
+Table CATALOG created.
+
+
+Table CATALOG_ENTRY created.
+
+
+Table SHIPMENT created.
+
+
+Table MOVIE_ORDER created.
+
+
+Table INVENTORY_MOVIE created.
+
+
+Table MOVIE_RENTAL created.
+
+
+Table AWARD created.
+
+
+Table ACTOR created.
+
+
+Table CASTING created.
+
+
+Table DIRECTOR created.
+
+
+Table DIRECTOR_SEAT created.
+
+
+5 rows inserted.
+
+
+5 rows inserted.
+
+
+5 rows inserted.
+
+
+5 rows inserted.
+
+
+5 rows inserted.
+
+
+5 rows inserted.
+
+
+5 rows inserted.
+
+
+5 rows inserted.
+
+
+5 rows inserted.
+
+
+5 rows inserted.
+
+
+5 rows inserted.
+
+
+5 rows inserted.
+
+
+5 rows inserted.
+
+
+5 rows inserted.
+
+
+5 rows inserted.
+
+
+5 rows inserted.
+
+
+5 rows inserted.
+
+
+CUSTOMERID FIRSTNAME            LASTNAME             STREETADDRESS                  CITY                    ZIPCODE PHONENUMBER
+---------- -------------------- -------------------- ------------------------------ -------------------- ---------- -----------
+         1 First                Customer             1 Easy St.                     City                      11111  8005550001
+         2 Second               Client               2 Easy St.                     City                      22222  8005550002
+         3 Third                Renter               3 Easy St.                     City                      33333  8005550003
+         4 Fourth               Consumer             4 Easy St.                     City                      44444  8005550004
+         5 Fifth                Maiden               5 Easy St.                     City                      55555  8005550005
+
+
+  RENTALID CUSTOMERID DATERENTE DUEDATE   DATERETUR    TAXRATE
+---------- ---------- --------- --------- --------- ----------
+        11          1 27-FEB-21 01-MAR-21 01-MAR-21         .8
+        12          2 13-MAR-21 15-MAR-21 14-MAR-21         .8
+        13          3 27-MAR-21 29-MAR-21 31-MAR-21         .8
+        14          4 10-APR-21 12-APR-21 17-APR-21         .8
+        15          5 24-APR-21 26-APR-21                   .8
+
+
+FEETYPE              CHARGE
+---------------- ----------
+LATE                      1
+DAMAGED                 2.5
+REWIND                  .25
+DESTROYED                25
+LOST                     25
+
+
+APPLIEDFEEID   RENTALID FEETYPE         
+------------ ---------- ----------------
+         110         11 DAMAGED         
+         120         12 REWIND          
+         130         13 LATE            
+         140         14 LATE            
+         141         14 REWIND          
+
+
+   MOVIEID TITLE                          I GENRE                RUNNINGLENGTH RATI       YEAR
+---------- ------------------------------ - -------------------- ------------- ---- ----------
+       200 Movie1                         N genre1                          90 PG13       1990
+       210 Movie2                         N genre2                         100 R          1999
+       211 Movie3                         Y genre3                          98 G          1998
+       221 Movie4                         Y genre4                          67 PG13       2000
+       231 Movie5                         Y genre5                         128 PG         2000
+
+
+DISTRIBUTORID DISTRIBUTO LOYALTYDISCOUNT
+------------- ---------- ---------------
+          300 Dist1                   .1
+          301 Dist2                  .05
+          302 Dist3                     
+          303 Dist4                     
+          304 Dist5                  .12
+
+
+ CATALOGID DISTRIBUTORID VOLUME    
+---------- ------------- ----------
+     11999           300 JAN1999   
+     11999           301 1999Q1    
+     12099           302 DEC1999   
+     12000           303 JAN2000   
+    200101           304 JAN2001   
+
+
+CATALOGENTRYID  CATALOGID DISTRIBUTORID    MOVIEID WHOLESALEPRICE
+-------------- ---------- ------------- ---------- --------------
+           400      11999           300        200           2.75
+           401      11999           301        210            2.7
+           402      12099           302        211           3.65
+           403      12000           303        221           3.59
+           404     200101           304        231           3.25
+
+
+SHIPMENTID DISTRIBUTORID DATEORDER DATESHIPP
+---------- ------------- --------- ---------
+      1234           300 01-FEB-99 07-FEB-99
+      1234           301 01-FEB-99 10-FEB-99
+      1302           302 06-DEC-99 08-DEC-99
+      2300           300 09-JAN-00 13-JAN-00
+      1304           304 15-APR-01 16-APR-01
+
+
+MOVIEORDERID CATALOGENTRYID SHIPMENTID DISTRIBUTORID   QUANTITY
+------------ -------------- ---------- ------------- ----------
+          10            400       1234           300         10
+          11            401       1234           301         10
+          12            402       1302           302         10
+          13            403       2300           300         10
+          14            404       1304           304         10
+
+
+INVENTORYID CATALOGENTRYID QUANTITYINSTOCK
+----------- -------------- ---------------
+         91            400              10
+         92            401              10
+         93            402              10
+         94            403              10
+         95            404              10
+
+
+MOVIERENTALID   RENTALID INVENTORYID
+------------- ---------- -----------
+          501         11          91
+          502         12          92
+          503         13          93
+          504         14          94
+          505         15          95
+
+
+NAME             YEAR    MOVIEID
+---------- ---------- ----------
+Award1           1991        200
+Award2           2000        210
+Award3           1999        211
+Award4           2001        221
+Award5           2001        231
+
+
+   ACTORID NAME                                              
+---------- --------------------------------------------------
+      1101 Actor1                                            
+      1102 Actor2                                            
+      1103 Actor3                                            
+      1104 Actor4                                            
+      1105 Actor5                                            
+
+
+ CASTINGID    MOVIEID    ACTORID
+---------- ---------- ----------
+      1111        200       1101
+      1112        210       1102
+      1113        211       1103
+      1114        221       1104
+      1115        231       1105
+
+
+DIRECTORID NAME                                              
+---------- --------------------------------------------------
+      1201 Director1                                         
+      1202 Director2                                         
+      1203 Director3                                         
+      1204 Director4                                         
+      1205 Director5                                         
+
+
+DIRECTORSEATID    MOVIEID DIRECTORID
+-------------- ---------- ----------
+          1211        200       1201
+          1212        210       1202
+          1213        211       1203
+          1214        221       1204
+          1215        231       1205
+

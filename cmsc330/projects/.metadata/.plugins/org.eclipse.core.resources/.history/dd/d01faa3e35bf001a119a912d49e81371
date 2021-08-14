@@ -1,0 +1,21 @@
+
+public class Summer extends Season implements WeatherReport {
+
+	public Summer(int temperature, String month) {
+		super(temperature, month);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public int getTemperature() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String getMonth() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
