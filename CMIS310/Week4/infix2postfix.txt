@@ -1,0 +1,17 @@
+ X = A * B + C - D * E
+
+ STEP | STACK | POSTFIX    | ACTION
+------+-------+------------+--------------
+   1  |   		| A          | INSERT A
+ 	 2  |       | AB         | INSERT B
+ 	 3  |  *    | AB         | PUSH *
+	 4  |       | AB*        | POP/INSERT *
+	 5  |  +    | AB*        | PUSH +
+	 6  |  +    | AB*C       | INSERT C
+	 7  |       | AB*C+      | POP/INSERT +
+	 8  |  -    | AB*C+      | PUSH -
+   9  |  -    | AB*C+D     | INSERT D
+  10  |  -    | AB*C+DE    | INSERT E
+  11  |  - *  | AB*C+DE    | PUSH *
+  12  |  -    | AB*C+DE*   | POP/INSERT *
+  13  |       | AB*C+DE*-  | POP/INSERT -

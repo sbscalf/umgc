@@ -1,0 +1,54 @@
+Samuel Scalf     CMIS 310     Dr. Yul Williams
+
+1. What is the difference between multiprogramming and multiprocessing? Mulitprogramming and multithreading?
+
+• Multiprogramming, perhaps also called multitasking, is the concept of loading more than one program into main memory. Doing so enables the CPU to start another program immediately after completing one, or running another program if one program is taking time (i.e. waiting for Hard Disk I/O).
+
+• Multiprocessing is when there is more than one physical CPU available. With multiprocessing Different threads of the same program can be running simultaneously on different CPUs, or different programs could be running on the different CPUs. For example, multiple calculations on your spreadsheet software could be updating simultaneously, or you could have that same software on one core and your web browser running on a different core, and so on.
+
+• Multithreading is when the frontend of a CPU allows for multiple instructions to enter the pipeline, but ultimately channeling through a single CPU. The CPU is able to quickly switch between the threads, and allows the CPU to continue accepting instructions from one thread if the other is backed up. One key thing to note is that the different threads do not need to be from the same program. If you combine multiprogramming and multithreading, even on a single-core system, the CPU is able to switch back and forth between the two programs fast enough to give the appearance both programs are running simultaneously.
+
+• A great example of multithreading is airport security. The next time you're going through an airport, you may notice there are two conveyor belt/X-Ray devices that lead to the same detector. This is like two threads leading to the same CPU. Sometimes one line might get backed up while someone is emptying their pockets and taking off shoes. People in the other line are still able to go through the detector during this time, allowing for more efficient use. Most of the time, however, both lines are flowing smoothly and there is a slight bottleneck. Even with this bottleneck, it is more efficient than one line per detector. By increasing the number of detectors, you can handle even more lines. This is like multiprocessing.
+
+
+2. Why should assembly language be avoided for general application development? Under what circumstances is assembly language preferred or required?
+
+• Assembly language should be avoided for general application development for a few reasons. For one, assembly language is architecture-dependent. Assembly code written for an ARM processor will probably not work on a x86 processor. This also means that programs written in assembly code are not cross-platform portable. Another reason is that most programs do not need fine-tuned performance or memory management tweaks thanks to the speed and efficiency of modern processors and memory sizes. Hence, it is more time efficient for a programmer to use a high-level language for general programming and leave conversion to the compiler instead of jamming out tens or hundreds of thousands of lines of code. Yet another reason would be that updates and/or maintenance would be more difficult and time-consuming.
+
+• Assembly language is not without its uses, though. Programmers wishing to create device drivers or embedded systems will most likely use assembly language. This is because assembly language has a more intimate relation to the hardware device. With assembly language, an instruction is doing exactly what it is saying, usually without further abstraction (like in RISC).
+
+
+3. In the case a programmer is designing the drivers for a servo or an embedded system, where the instructions are likely to never change, assembly language is probably the better choice. This is especially true for special, unique hardware that is specifically designed for a very specific purpose, such as a uranium centrifuge. Due to the unique nature of these systems, it is more efficient and accurate to use assembly language.
+
+
+4. Since a compiled language is translated directly into machine code when compiled, it simply needs to be loaded and executed. This saves a lot of time during runtime, running faster due to not needing to interpret each instruction. Once compiled, however, if there are any changes that are made, the whole program needs to be recompiled.  This is one of the advantages of an interpreted language -- it is more flexible. Since interpreted languages are, well, interpreted at runtime, they are naturally more portable, too. If needing to perform resource-heavy tasks, it is better to use a compiled language.
+
+
+5. Having 12 global registers leaves us with 140 registers. Given 10 register windows with 6 input and 6 output registers, we have 140 = 10(x + 6) where x is the number of local registers. Note that the input registers of one window are shared with the output of the previous. Doing some simple algebra leaves us with x = 14 - 6 = 8 input registers in each window set.
+
+
+6. 1. R
+   2. C
+   3. R
+   4. R
+   5. C
+   6. C
+   7. R
+   8. C
+   9. R
+  10. R
+
+
+7 - 9: First I calculate the number of clock cycles per instruction: c = 1 + 2 + 3 = 6.  The other "global" variables are C, total clock cycles required, and i, the number of instructions (50).  In preparing for these problems I started with a smaller number for c and i (3 and 6, respectively). With that, I was able to come up with the equations given at the start of my answers.
+
+7. C = c * i = 6 * 50 = 300 clock cycles
+
+8. C = c + i - 1 = 6 + 50 - 1 = 55 clock cycles
+
+9. C = c + ceil[(i - p) / p], where p = number of parallel instructions
+	C = 6 + ceil[(50 - 2) / 2] = 6 + ceil[48 / 2] = 6 + ceil[24] = 6 + 24 = 30 clock cycles
+
+
+10a. The essential characteristic of the superscalar approach to processor design is achieving parallelism through pipelining and replication. In other words, the superscalar approach allows completion of multiple simultaneously, not just seemingly so.
+
+10b. Superpipelining improves system performance by simplifying each pipeline stage and shortening the clock cycle. So long as the cycles per instruction remains the same, the faster the clock, the faster the program. Superscalar improves system performance by running multiple instructions in parallel. By increasing the number of instructions per cycle, it decreases the total number of cycles required.
