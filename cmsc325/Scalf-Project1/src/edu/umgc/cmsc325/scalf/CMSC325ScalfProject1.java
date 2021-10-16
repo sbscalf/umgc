@@ -26,6 +26,7 @@ public class CMSC325ScalfProject1 extends JPanel {
 		drawDoor(g);
 		drawDoorknob(g);
 		drawWindow(g);
+		drawSun(g);
 	}
 	
 	private void drawGround(Graphics g) {
@@ -90,6 +91,13 @@ public class CMSC325ScalfProject1 extends JPanel {
 		g2d.setStroke(new BasicStroke(2));
 		g2d.setColor(Color.BLACK);
 		g2d.draw(pane);
+	}
+	
+	private void drawSun(Graphics g) {
+		Graphics2D g2d = (Graphics2D) g;
+		Ellipse2D sun = new Ellipse2D.Double(300, -100, 200, 200);
+		g2d.setColor(Color.YELLOW);
+		g2d.fill(sun);
 	}
 	
 }
