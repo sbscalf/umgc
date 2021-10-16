@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.GeneralPath;
+import java.awt.geom.Rectangle2D;
 
 import javax.swing.JPanel;
 
@@ -18,6 +19,7 @@ public class CMSC325ScalfProject1 extends JPanel {
 		super.paintComponent(g);
 		// Call methods to draw
 		drawGround(g);
+		drawHouseBase(g);
 	}
 	
 	private void drawGround(Graphics g) {
@@ -30,7 +32,13 @@ public class CMSC325ScalfProject1 extends JPanel {
 		ground.closePath();
 		g2d.setColor(new Color(0, 128, 0));
 		g2d.fill(ground);
-		g2d.draw(ground);
+	}
+	
+	private void drawHouseBase(Graphics g) {
+		Graphics2D g2d = (Graphics2D) g;
+		Rectangle2D base = new Rectangle2D.Double(135, 200, 130, 80);
+		g2d.setColor(new Color(124, 89, 61));
+		g2d.fill(base);
 	}
 	
 }
