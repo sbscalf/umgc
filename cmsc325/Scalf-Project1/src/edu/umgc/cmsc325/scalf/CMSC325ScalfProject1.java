@@ -1,5 +1,6 @@
 package edu.umgc.cmsc325.scalf;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -24,6 +25,7 @@ public class CMSC325ScalfProject1 extends JPanel {
 		drawHouseRoof(g);
 		drawDoor(g);
 		drawDoorknob(g);
+		drawWindow(g);
 	}
 	
 	private void drawGround(Graphics g) {
@@ -61,6 +63,9 @@ public class CMSC325ScalfProject1 extends JPanel {
 		Rectangle2D door = new Rectangle2D.Double(213, 238, 26, 42);
 		g2d.setColor(Color.WHITE);
 		g2d.fill(door);
+		g2d.setStroke(new BasicStroke(2));
+		g2d.setColor(Color.BLACK);
+		g2d.draw(door);
 	}
 	
 	private void drawDoorknob(Graphics g) {
@@ -68,6 +73,23 @@ public class CMSC325ScalfProject1 extends JPanel {
 		Ellipse2D doorknob = new Ellipse2D.Double(229.25, 259, 6.5, 6.5);
 		g2d.setColor(Color.BLACK);
 		g2d.fill(doorknob);
+	}
+	
+	private void drawWindow(Graphics g) {
+		drawWindowPane(g, 150, 220);
+		drawWindowPane(g, 150, 235);
+		drawWindowPane(g, 170, 220);
+		drawWindowPane(g, 170, 235);
+	}
+	
+	private void drawWindowPane(Graphics g, int x, int y) {
+		Graphics2D g2d = (Graphics2D) g;
+		Rectangle2D pane = new Rectangle2D.Double(x, y, 20, 15);
+		g2d.setColor(Color.WHITE);
+		g2d.fill(pane);
+		g2d.setStroke(new BasicStroke(2));
+		g2d.setColor(Color.BLACK);
+		g2d.draw(pane);
 	}
 	
 }
