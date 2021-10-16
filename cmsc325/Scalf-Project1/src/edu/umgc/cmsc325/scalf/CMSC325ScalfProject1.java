@@ -4,9 +4,12 @@ import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.geom.Arc2D;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Rectangle2D;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JPanel;
 
@@ -27,6 +30,10 @@ public class CMSC325ScalfProject1 extends JPanel {
 		drawDoorknob(g);
 		drawWindow(g);
 		drawSun(g);
+		drawCloud(g);
+		drawBird(g, 40, 160);
+		drawBird(g, 200, 80);
+		drawBird(g, 300, 130);
 	}
 	
 	private void drawGround(Graphics g) {
@@ -98,6 +105,28 @@ public class CMSC325ScalfProject1 extends JPanel {
 		Ellipse2D sun = new Ellipse2D.Double(300, -100, 200, 200);
 		g2d.setColor(Color.YELLOW);
 		g2d.fill(sun);
+	}
+	
+	private void drawCloud(Graphics g) {
+		Graphics2D g2d = (Graphics2D) g;
+		List<Ellipse2D> clouds = new ArrayList<>();
+		clouds.add(new Ellipse2D.Double(-50, 0, 100, 100));
+		clouds.add(new Ellipse2D.Double(0, -100, 200, 200));
+		clouds.add(new Ellipse2D.Double(125, -50, 100, 100));
+		g2d.setColor(Color.LIGHT_GRAY);
+		for (Ellipse2D cloud : clouds)
+			g2d.fill(cloud);
+	}
+	
+	private void drawBird(Graphics g, int x, int y) {
+		int wingspan = 30;
+		Graphics2D g2d = (Graphics2D) g;
+		Arc2D leftWing = new Arc2D.Double(x, y, wingspan, 10, 0, 90, Arc2D.OPEN);
+		Arc2D rightWing = new Arc2D.Double(x + wingspan, y, wingspan, 10, 180, -90, Arc2D.OPEN);
+		g2d.setStroke(new BasicStroke(1.5f));
+		g2d.setColor(Color.BLACK);
+		g2d.draw(leftWing);
+		g2d.draw(rightWing);
 	}
 	
 }
