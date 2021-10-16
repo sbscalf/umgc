@@ -23,6 +23,7 @@ public class CMSC325ScalfProject1 extends JPanel {
 		drawHouseBase(g);
 		drawHouseRoof(g);
 		drawDoor(g);
+		drawDoorknob(g);
 	}
 	
 	private void drawGround(Graphics g) {
@@ -60,6 +61,13 @@ public class CMSC325ScalfProject1 extends JPanel {
 		Rectangle2D door = new Rectangle2D.Double(213, 238, 26, 42);
 		g2d.setColor(Color.WHITE);
 		g2d.fill(door);
+	}
+	
+	private void drawDoorknob(Graphics g) {
+		Graphics2D g2d = (Graphics2D) g;
+		Ellipse2D doorknob = new Ellipse2D.Double(229.25, 259, 6.5, 6.5);
+		g2d.setColor(Color.BLACK);
+		g2d.fill(doorknob);
 	}
 	
 }
