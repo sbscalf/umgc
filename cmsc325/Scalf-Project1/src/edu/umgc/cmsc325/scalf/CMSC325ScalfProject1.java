@@ -7,9 +7,11 @@ import java.awt.Graphics2D;
 import java.awt.geom.Arc2D;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.GeneralPath;
+import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import javax.swing.JPanel;
 
@@ -34,6 +36,10 @@ public class CMSC325ScalfProject1 extends JPanel {
 		drawBird(g, 40, 160);
 		drawBird(g, 200, 80);
 		drawBird(g, 300, 130);
+		drawGrassTuft(g, 65, 260);
+		drawGrassTuft(g, 170, 310);
+		drawGrassTuft(g, 240, 285);
+		drawGrassTuft(g, 330, 330);
 	}
 	
 	private void drawGround(Graphics g) {
@@ -64,6 +70,11 @@ public class CMSC325ScalfProject1 extends JPanel {
 		roof.closePath();
 		g2d.setColor(new Color(124, 89, 61));
 		g2d.fill(roof);
+		
+		Line2D eves = new Line2D.Double(135, 200, 264, 200);
+		g2d.setStroke(new BasicStroke(1.25f));
+		g2d.setColor(new Color(74, 53, 36));
+		g2d.draw(eves);
 	}
 	
 	private void drawDoor(Graphics g) {
@@ -105,6 +116,12 @@ public class CMSC325ScalfProject1 extends JPanel {
 		Ellipse2D sun = new Ellipse2D.Double(300, -100, 200, 200);
 		g2d.setColor(Color.YELLOW);
 		g2d.fill(sun);
+		g2d.drawLine(290, 5, 245, 10);
+		g2d.drawLine(295, 25, 248, 42);
+		g2d.drawLine(305, 50, 262, 75);
+		g2d.drawLine(325, 75, 290, 110);
+		g2d.drawLine(350, 95, 325, 135);
+		g2d.drawLine(375, 105, 360, 152);
 	}
 	
 	private void drawCloud(Graphics g) {
@@ -127,6 +144,24 @@ public class CMSC325ScalfProject1 extends JPanel {
 		g2d.setColor(Color.BLACK);
 		g2d.draw(leftWing);
 		g2d.draw(rightWing);
+	}
+	
+	private void drawGrassTuft(Graphics g, int x, int y) {
+		Graphics2D g2d = (Graphics2D) g;
+		Arc2D[] blades = new Arc2D[8];
+		blades[0] = new Arc2D.Double(x, y, 10, 20, 0, 90, Arc2D.OPEN);
+		blades[1] = new Arc2D.Double(x - 5, y, 20, 15, 0, 90, Arc2D.OPEN);
+		blades[2] = new Arc2D.Double(x + 5, y - 3, 10, 15, 0, 90, Arc2D.OPEN);
+		blades[3] = new Arc2D.Double(x + 5, y - 3, 13, 15, 0, 90, Arc2D.OPEN);
+		blades[4] = new Arc2D.Double(x + 15, y, 20, 20, 180, -90, Arc2D.OPEN);
+		blades[5] = new Arc2D.Double(x + 20, y, 10, 20, 180, -90, Arc2D.OPEN);
+		blades[6] = new Arc2D.Double(x + 20, y + 5, 10, 10, 180, -90, Arc2D.OPEN);
+		blades[7] = new Arc2D.Double(x + 25, y + 5, 5, 10, 180, -90, Arc2D.OPEN);
+		g2d.setStroke(new BasicStroke(1.2f));
+		g2d.setColor(Color.BLACK);
+		for (Arc2D blade : blades)
+			if (blade != null)
+				g2d.draw(blade);
 	}
 	
 }
