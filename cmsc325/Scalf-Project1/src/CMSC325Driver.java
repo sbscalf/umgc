@@ -1,5 +1,3 @@
-package edu.umgc.cmsc325.scalf;
-
 import javax.swing.JFrame;
 
 public class CMSC325Driver extends JFrame {
