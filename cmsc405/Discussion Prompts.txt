@@ -1,0 +1,43 @@
+Computer Graphics
+
+Computer graphics are used in practically every industry and field.
+
+Pick your favorite industry or field (e.g., Entertainment, Computer Art, Image processing …) and share a graphical image, animation or video clip related to that field with the class. Be sure to describe the graphic, explain why you selected this graphic and reference your sources.
+
+
+
+
+
+SVG Graphics 
+
+Using the examples found in the readings for this week, create a simple, yet unique graphic using SVG.
+
+The graphic should incorporate shape transformation methods and animation.
+
+Share both the code and screen capture of the graphic.
+
+
+
+
+
+
+
+
+JOGL Light Demo
+
+Modify jogl/FourLights.java found in the week 5 readings to make a unique, lighted scene of your choice.
+
+You should modify the light sources and the object. Post your new code as well as the resulting image(s).
+
+
+
+
+
+
+
+
+WebGL 2D transforms
+
+Using the examples provides in chapter 6, provide a simple unique 2D animated scene that uses transformation to assist in the resulting animation.
+
+Share your code and screen captures of your graphic. For your code, be sure to rename it .txt as all .html files are edited by LEO. You could also, submit it as a .zip file to avoid the issue as well.

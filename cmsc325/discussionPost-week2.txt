@@ -1,0 +1,11 @@
+According to IEEE, "usability is the extent to which a product can be used by intended users to achieve specified goals with effectiveness, efficiency, and satisfaction" [1]. This definition of usability is quite broad and highly dependent upon a specific product's intended use.  So, usability metrics also change from product to product, including software and games.  At the end of the day, a game developer determines the criteria for a game's usability.  Some of these criteria have been somewhat standardized by the gaming community, such as WASD for movement, but are not requirements.  Interestingly, however, a game could be very usable, but fail at being a playable game.
+
+A team of researchers -- namely, Sanchez, Vela, Simarro, and Padilla-Zea [2] -- has worked on developing criteria for a game's playability.  This is an extension of usability and user experience (UX) to further define playability and player experience (PX).  Sanchez and team developed seven attributes to measure PX: "Satisfaction, Learnability, Effectiveness, Immersion, Motivation, Emotion and Socialisation."  Their journal article goes into more detail about each of these attributesc each attribute's characteristics, and a breakdown of tests.
+
+In conclusion, a game only has as much worth as not only its usability, but also its playability.  A game must have usability to classify as good software.  That is not enough, though, because a game must also have playability to classify as a good game.  Every game developer should strive to achieve maximum playability on top of usability.
+
+=======================================================================================================================================
+
+[1] IEEE, "Usability and Accessibility," //IEEE Brand Experience//, 05-Mar-2021. [Online]. Available: https://brand-experience.ieee.org/guidelines/digital/style-guide/usability-and-accessibility/. [Accessed: 26-Oct-2021].
+
+[2] J. L. G. Sánchez, F. L. G. Vela, F. M. Simarro, and N. Padilla-Zea, “Playability: analysing user experience in video games,” //Behaviour & Information Technology//, vol. 31, no. 10, pp. 1033–1054, 2012. [Online] Available: EBSCOhost, doi:10.1080/0144929X.2012.710648.

@@ -1,0 +1,8 @@
+Material Target : Common/MatDefs/Misc/Unshaded.j3md {
+     MaterialParameters {
+        ColorMap : "Common/MatDefs/Water/Textures/water_normalmap.png"
+        Color : 1.0 0.84313726 0.0 1.0
+     }
+    AdditionalRenderState {
+    }
+}
