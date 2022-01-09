@@ -7,7 +7,6 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
-
 import javax.swing.JPanel;
 
 public class CMSC405P1Panel extends JPanel {
@@ -18,8 +17,10 @@ public class CMSC405P1Panel extends JPanel {
   private static final int OFFSET = 60;
   private final BufferedImage[] images;
   private int frameNumber;
-  private int translateX, translateY;
-  private double scaleX, scaleY;
+  private int translateX;
+  private int translateY;
+  private double scaleX;
+  private double scaleY;
   private double rotation;
   private AffineTransform savedTransform;
   private Graphics2D g2;
