@@ -12,46 +12,46 @@ import javax.swing.JPanel;
 
 public class CMSC405P1Panel extends JPanel {
 
-	private static final long serialVersionUID = 5151401693160166408L;
-	private static final int PANEL_HEIGHT = 600;
-	private static final int PANEL_WIDTH = 800;
-	private static final int OFFSET = 60;
-	private final BufferedImage[] images;
-	private int frameNumber;
-	private int translateX, translateY;
-	private double scaleX, scaleY;
-	private double rotation;
-	private AffineTransform savedTransform;
-	private Graphics2D g2;
-	
-	CMSC405P1Panel() {
-		setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
-		images = new BufferedImage[] {
-			PixelImage.PIKACHU.getImage(),
-			PixelImage.ALPACA.getImage(),
-			PixelImage.NOODLES.getImage()
-		};
-	}
+  private static final long serialVersionUID = 5151401693160166408L;
+  private static final int PANEL_HEIGHT = 600;
+  private static final int PANEL_WIDTH = 800;
+  private static final int OFFSET = 60;
+  private final BufferedImage[] images;
+  private int frameNumber;
+  private int translateX, translateY;
+  private double scaleX, scaleY;
+  private double rotation;
+  private AffineTransform savedTransform;
+  private Graphics2D g2;
+  
+  CMSC405P1Panel() {
+    setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
+    images = new BufferedImage[] {
+      PixelImage.PIKACHU.getImage(),
+      PixelImage.ALPACA.getImage(),
+      PixelImage.NOODLES.getImage()
+    };
+  }
 
-	@Override
-	protected void paintComponent(Graphics g) {
-		configureGraphics(g);
-		setTransformation();
-		transformImages();
-		frameNumber = (frameNumber + 1) % 5;
-	}
+  @Override
+  protected void paintComponent(Graphics g) {
+    configureGraphics(g);
+    setTransformation();
+    transformImages();
+    frameNumber = (frameNumber + 1) % 5;
+  }
 
-	private void configureGraphics(Graphics g) {
-		g2 = (Graphics2D) g.create();
-		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		g2.setPaint(Color.WHITE);
-		g2.fillRect(0, 0, PANEL_WIDTH, PANEL_HEIGHT);
-		applyWindowToViewportTransformation(g2, -130, 150, 130, -60, true);
-		savedTransform = g2.getTransform();
-	}
-	
-	// Method modified from AnimationStarter.java Code
-	// Last three lines for pixelSize were removed
+  private void configureGraphics(Graphics g) {
+    g2 = (Graphics2D) g.create();
+    g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+    g2.setPaint(Color.WHITE);
+    g2.fillRect(0, 0, PANEL_WIDTH, PANEL_HEIGHT);
+    applyWindowToViewportTransformation(g2, -130, 150, 130, -60, true);
+    savedTransform = g2.getTransform();
+  }
+  
+  // Method modified from AnimationStarter.java Code
+  // Last three lines for pixelSize were removed
     private void applyWindowToViewportTransformation(Graphics2D g2,
             double left, double right, double bottom, double top,
             boolean preserveAspect) {
@@ -77,40 +77,40 @@ public class CMSC405P1Panel extends JPanel {
         g2.translate(-left, -top);
     }
 
-	private void setTransformation() {
-		System.out.printf("Frame is %d%n", frameNumber);
-		switch(frameNumber) {
-			case 1:
-				translateX += -5;
-				translateY += 7;
-				break;
-			case 2:
-				rotation += -45 * Math.PI / 180.0;
-				break;
-			case 3:
-				rotation += 90 * Math.PI / 180.0;
-				break;
-			case 4:
-				scaleX *= 2;
-				scaleY *= 0.5;
-				break;
-			default:
-				translateX = 0;
-				translateY = 0;
-				scaleX = 1.0;
-				scaleY = 1.0;
-				rotation = 0.0;
-		}
-	}
+  private void setTransformation() {
+    System.out.printf("Frame is %d%n", frameNumber);
+    switch(frameNumber) {
+      case 1:
+        translateX += -5;
+        translateY += 7;
+        break;
+      case 2:
+        rotation += -45 * Math.PI / 180.0;
+        break;
+      case 3:
+        rotation += 90 * Math.PI / 180.0;
+        break;
+      case 4:
+        scaleX *= 2;
+        scaleY *= 0.5;
+        break;
+      default:
+        translateX = 0;
+        translateY = 0;
+        scaleX = 1.0;
+        scaleY = 1.0;
+        rotation = 0.0;
+    }
+  }
     
     private void transformImages() {
-    	for (int i = 0; i < images.length; i++) {
-    		transformImage(images[i], ((images.length / 2) - i) * OFFSET);
-    	}
+      for (int i = 0; i < images.length; i++) {
+        transformImage(images[i], ((images.length / 2) - i) * OFFSET);
+      }
     }
     
     private void transformImage(BufferedImage image, int offset) {
-    	g2.translate(translateX + offset, translateY);
+      g2.translate(translateX + offset, translateY);
         g2.rotate(rotation);
         g2.scale(scaleX, scaleY);
         g2.drawImage(image, 0, 0, this);
