@@ -24,14 +24,11 @@ public class CMSC405P1Panel extends JPanel {
   private double rotation;
   private AffineTransform savedTransform;
   private Graphics2D g2;
-  
+
   CMSC405P1Panel() {
     setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
-    images = new BufferedImage[] {
-      PixelImage.PIKACHU.getImage(),
-      PixelImage.ALPACA.getImage(),
-      PixelImage.NOODLES.getImage()
-    };
+    images = new BufferedImage[] {PixelImage.PIKACHU.getImage(), PixelImage.ALPACA.getImage(),
+        PixelImage.NOODLES.getImage()};
   }
 
   @Override
@@ -50,37 +47,36 @@ public class CMSC405P1Panel extends JPanel {
     applyWindowToViewportTransformation(g2, -130, 150, 130, -60, true);
     savedTransform = g2.getTransform();
   }
-  
+
   // Method modified from AnimationStarter.java Code
   // Last three lines for pixelSize were removed
-    private void applyWindowToViewportTransformation(Graphics2D g2,
-            double left, double right, double bottom, double top,
-            boolean preserveAspect) {
-        int width = getWidth();   // The width of this drawing area, in pixels.
-        int height = getHeight(); // The height of this drawing area, in pixels.
-        if (preserveAspect) {
-            // Adjust the limits to match the aspect ratio of the drawing area.
-            double displayAspect = Math.abs((double) height / width);
-            double requestedAspect = Math.abs((bottom - top) / (right - left));
-            if (displayAspect > requestedAspect) {
-                // Expand the viewport vertically.
-                double excess = (bottom - top) * (displayAspect / requestedAspect - 1);
-                bottom += excess / 2;
-                top -= excess / 2;
-            } else if (displayAspect < requestedAspect) {
-                // Expand the viewport vertically.
-                double excess = (right - left) * (requestedAspect / displayAspect - 1);
-                right += excess / 2;
-                left -= excess / 2;
-            }
-        }
-        g2.scale(width / (right - left), height / (bottom - top));
-        g2.translate(-left, -top);
+  private void applyWindowToViewportTransformation(Graphics2D g2, double left, double right,
+      double bottom, double top, boolean preserveAspect) {
+    int width = getWidth(); // The width of this drawing area, in pixels.
+    int height = getHeight(); // The height of this drawing area, in pixels.
+    if (preserveAspect) {
+      // Adjust the limits to match the aspect ratio of the drawing area.
+      double displayAspect = Math.abs((double) height / width);
+      double requestedAspect = Math.abs((bottom - top) / (right - left));
+      if (displayAspect > requestedAspect) {
+        // Expand the viewport vertically.
+        double excess = (bottom - top) * (displayAspect / requestedAspect - 1);
+        bottom += excess / 2;
+        top -= excess / 2;
+      } else if (displayAspect < requestedAspect) {
+        // Expand the viewport vertically.
+        double excess = (right - left) * (requestedAspect / displayAspect - 1);
+        right += excess / 2;
+        left -= excess / 2;
+      }
     }
+    g2.scale(width / (right - left), height / (bottom - top));
+    g2.translate(-left, -top);
+  }
 
   private void setTransformation() {
     System.out.printf("Frame is %d%n", frameNumber);
-    switch(frameNumber) {
+    switch (frameNumber) {
       case 1:
         translateX += -5;
         translateY += 7;
@@ -103,19 +99,19 @@ public class CMSC405P1Panel extends JPanel {
         rotation = 0.0;
     }
   }
-    
-    private void transformImages() {
-      for (int i = 0; i < images.length; i++) {
-        transformImage(images[i], ((images.length / 2) - i) * OFFSET);
-      }
+
+  private void transformImages() {
+    for (int i = 0; i < images.length; i++) {
+      transformImage(images[i], ((images.length / 2) - i) * OFFSET);
     }
-    
-    private void transformImage(BufferedImage image, int offset) {
-      g2.translate(translateX + offset, translateY);
-        g2.rotate(rotation);
-        g2.scale(scaleX, scaleY);
-        g2.drawImage(image, 0, 0, this);
-        g2.setTransform(savedTransform);
-    }
+  }
+
+  private void transformImage(BufferedImage image, int offset) {
+    g2.translate(translateX + offset, translateY);
+    g2.rotate(rotation);
+    g2.scale(scaleX, scaleY);
+    g2.drawImage(image, 0, 0, this);
+    g2.setTransform(savedTransform);
+  }
 
 }
