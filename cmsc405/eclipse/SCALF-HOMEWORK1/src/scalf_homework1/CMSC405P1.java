@@ -1,4 +1,4 @@
-package cmsc405.scalf.project1;
+package scalf_homework1;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
