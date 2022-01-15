@@ -1,0 +1,9 @@
+SCALF-HOMEWORK1.jar
+SCALF-HOMEWORK1.pdf
+SCALF-HOMEWORK1-SRC.zip
+screenshots/frame0.png
+screenshots/frame1.png
+screenshots/frame2.png
+screenshots/frame3.png
+screenshots/frame4.png
+screenshots/frame5.png
