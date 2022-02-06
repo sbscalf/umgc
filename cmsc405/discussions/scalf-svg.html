@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sam's SVG</title>
+    <style>
+      svg { width: 300px; height: 300px;}
+      .clock {
+        transform-origin: 150px 150px;
+      }
+      .one { transform: rotate(30deg); }
+      .two { transform: rotate(60deg); }
+      .three { transform: rotate(90deg); }
+      .four { transform: rotate(120deg); }
+      .five { transform: rotate(150deg); }
+      .six { transform: rotate(180deg); }
+      .seven { transform: rotate(210deg); }
+      .eight { transform: rotate(240deg); }
+      .nine { transform: rotate(270deg); }
+      .ten { transform: rotate(300deg); }
+      .eleven { transform: rotate(330deg); }
+    </style>
+  </head>
+  <body>
+    <h1>Fast Clock</h1>
+    <!--
+      Original SVG is clock.svg.
+      Below is the minified version.
+      Thanks to Jake Archibald's SVGOMG (https://jakearchibald.github.io/svgomg/)
+    -->
+    <svg viewBox="0 0 300 300"><circle r="140" cx="150" cy="150" fill="beige" stroke-width="10" stroke="#8b4513"/><path class="twelve clock" d="M145 20h10v40h-10z"/><path class="one clock" d="M145 20h10v20h-10z"/><path class="two clock" d="M145 20h10v20h-10z"/><path class="three clock" d="M145 20h10v40h-10z"/><path class="four clock" d="M145 20h10v20h-10z"/><path class="five clock" d="M145 20h10v20h-10z"/><path class="six clock" d="M145 20h10v40h-10z"/><path class="seven clock" d="M145 20h10v20h-10z"/><path class="eight clock" d="M145 20h10v20h-10z"/><path class="nine clock" d="M145 20h10v40h-10z"/><path class="ten clock" d="M145 20h10v20h-10z"/><path class="eleven clock" d="M145 20h10v20h-10z"/><path class="clock minute" fill="green" d="M145 20h10v150h-10z"><animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 0 0" to="360 0 0" dur="6s" repeatCount="indefinite"/></path><path class="clock hour" fill="#00f" d="M145 75h10v95h-10z"><animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 0 0" to="360 0 0" dur="36s" repeatCount="indefinite"/></path><path class="clock second" fill="red" d="M148 18h4v152h-4z"><animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 0 0" to="360 0 0" dur="1s" repeatCount="indefinite"/></path></svg>
+  </body>
+</html>
