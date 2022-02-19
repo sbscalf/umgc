@@ -2,3 +2,118 @@
 /cmsc325/Scalf-Project4-v2/homework4_samuel_scalf/build/
 /cmsc325/Scalf-Project4-v2/homework4_samuel_scalf/dist/
 *.zip
+cmsc405/downloads/Java 2D Graphics/BImage.java
+cmsc405/downloads/Java 2D Graphics/Java2D/AnimationStarter.java
+cmsc405/downloads/Java 2D Graphics/Java2D/GraphicsStarter.java
+cmsc405/downloads/Java 2D Graphics/Java2D/HierarchicalModeling2D.java
+cmsc405/downloads/Java 2D Graphics/Java2D/JavaPixelManipulation.java
+cmsc405/downloads/Java 2D Graphics/Java2D/PaintDemo.java
+cmsc405/downloads/Java 2D Graphics/Java2D/QueenOfHearts.png
+cmsc405/downloads/Java 2D Graphics/Java2D/SceneGraphAPI2D.java
+cmsc405/downloads/Java 2D Graphics/Java2D/TinySmiley.png
+cmsc405/downloads/Java 2D Graphics/Project1Templates/CMSC405P1Template.java
+cmsc405/downloads/Java 2D Graphics/Project1Templates/ImageTemplate.java
+cmsc405/downloads/Java 2D Graphics/RotatedT.docx
+cmsc405/downloads/JOGL Downloads/jogamp/gluegen-javadoc.7z
+cmsc405/downloads/JOGL Downloads/jogamp/jogamp-all-platforms.7z
+cmsc405/downloads/JOGL Downloads/jogamp/jogl-javadoc.7z
+cmsc405/downloads/JOGL Downloads/jogl/Camera.java
+cmsc405/downloads/JOGL Downloads/jogl/CartAndWindmillJogl2D.java
+cmsc405/downloads/JOGL Downloads/jogl/ColorCubeOfSpheres.java
+cmsc405/downloads/JOGL Downloads/jogl/CubesWithVertexArrays.java
+cmsc405/downloads/JOGL Downloads/jogl/FirstTriangle.java
+cmsc405/downloads/JOGL Downloads/jogl/FourLights.java
+cmsc405/downloads/JOGL Downloads/jogl/IFSPolyhedronViewer.java
+cmsc405/downloads/JOGL Downloads/jogl/JoglStarter.java
+cmsc405/downloads/JOGL Downloads/jogl/Polyhedron.java
+cmsc405/downloads/JOGL Downloads/jogl/TextureDemo.java
+cmsc405/downloads/JOGL Downloads/jogl/TexturedShapes.java
+cmsc405/downloads/JOGL Downloads/jogl/TextureFromColorBuffer.java
+cmsc405/downloads/JOGL Downloads/jogl/textures/brick001.jpg
+cmsc405/downloads/JOGL Downloads/jogl/textures/Earth-1024x512.jpg
+cmsc405/downloads/JOGL Downloads/jogl/textures/mandelbrot.jpeg
+cmsc405/downloads/JOGL Downloads/jogl/textures/marble.jpg
+cmsc405/downloads/JOGL Downloads/jogl/textures/metal003.gif
+cmsc405/downloads/JOGL Downloads/jogl/textures/NightEarth-512x256.jpg
+cmsc405/downloads/JOGL Downloads/jogl/textures/README.txt
+cmsc405/downloads/JOGL Downloads/jogl/textures/Thumbs.db
+cmsc405/downloads/JOGL Downloads/jogl/UnlitCube.java
+cmsc405/downloads/JOGL Downloads/UnlitCube/UnlitCube.java
+cmsc405/downloads/Project Rubrics/Project 1.pdf
+cmsc405/downloads/Project Rubrics/Project 2.pdf
+cmsc405/downloads/Project Rubrics/Project 3.pdf
+cmsc405/downloads/Project Rubrics/Project 4.pdf
+cmsc405/downloads/week6/Using Three.pdf
+cmsc405/eclipse/SCALF-HOMEWORK1/.classpath
+cmsc405/eclipse/SCALF-HOMEWORK1/.project
+cmsc405/eclipse/SCALF-HOMEWORK1/.settings/org.eclipse.jdt.core.prefs
+cmsc405/eclipse/SCALF-HOMEWORK1/.settings/org.eclipse.jdt.ui.prefs
+cmsc405/eclipse/SCALF-HOMEWORK1/src/scalf_homework1/CMSC405P1.java
+cmsc405/eclipse/SCALF-HOMEWORK1/src/scalf_homework1/CMSC405P1Frame.java
+cmsc405/eclipse/SCALF-HOMEWORK1/src/scalf_homework1/CMSC405P1Panel.java
+cmsc405/eclipse/SCALF-HOMEWORK1/src/scalf_homework1/PixelImage.java
+cmsc405/eclipse/SCALF-HOMEWORK2/.classpath
+cmsc405/eclipse/SCALF-HOMEWORK2/.project
+cmsc405/eclipse/SCALF-HOMEWORK2/.settings/org.eclipse.jdt.core.prefs
+cmsc405/eclipse/SCALF-HOMEWORK2/bin/scalf_homework2/CMSC405P2$1.class
+cmsc405/eclipse/SCALF-HOMEWORK2/bin/scalf_homework2/CMSC405P2.class
+cmsc405/eclipse/SCALF-HOMEWORK2/bin/scalf_homework2/CMSC405P2Shape.class
+cmsc405/eclipse/SCALF-HOMEWORK2/bin/scalf_homework2/CMSC405P2Transformation.class
+cmsc405/eclipse/SCALF-HOMEWORK2/src/scalf_homework2/CMSC405P2.java
+cmsc405/eclipse/SCALF-HOMEWORK2/src/scalf_homework2/CMSC405P2Shape.java
+cmsc405/eclipse/SCALF-HOMEWORK2/src/scalf_homework2/CMSC405P2Transformation.java
+cmsc405/eclipse/test-jogl/.classpath
+cmsc405/eclipse/test-jogl/.project
+cmsc405/eclipse/test-jogl/.settings/org.eclipse.jdt.core.prefs
+cmsc405/eclipse/test-jogl/bin/Camera$TrackballMouser.class
+cmsc405/eclipse/test-jogl/bin/Camera.class
+cmsc405/eclipse/test-jogl/bin/CartAndWindmillJogl2D$1.class
+cmsc405/eclipse/test-jogl/bin/CartAndWindmillJogl2D.class
+cmsc405/eclipse/test-jogl/bin/ColorCubeOfSpheres.class
+cmsc405/eclipse/test-jogl/bin/CubesWithVertexArrays.class
+cmsc405/eclipse/test-jogl/bin/FirstTriangle.class
+cmsc405/eclipse/test-jogl/bin/FourLights$1.class
+cmsc405/eclipse/test-jogl/bin/FourLights$2.class
+cmsc405/eclipse/test-jogl/bin/FourLights.class
+cmsc405/eclipse/test-jogl/bin/IFSPolyhedronViewer$1.class
+cmsc405/eclipse/test-jogl/bin/IFSPolyhedronViewer$2.class
+cmsc405/eclipse/test-jogl/bin/IFSPolyhedronViewer.class
+cmsc405/eclipse/test-jogl/bin/JoglStarter$MenuHandler.class
+cmsc405/eclipse/test-jogl/bin/JoglStarter.class
+cmsc405/eclipse/test-jogl/bin/Polyhedron.class
+cmsc405/eclipse/test-jogl/bin/TextureDemo.class
+cmsc405/eclipse/test-jogl/bin/TexturedShapes.class
+cmsc405/eclipse/test-jogl/bin/TextureFromColorBuffer$1.class
+cmsc405/eclipse/test-jogl/bin/TextureFromColorBuffer$2.class
+cmsc405/eclipse/test-jogl/bin/TextureFromColorBuffer$3.class
+cmsc405/eclipse/test-jogl/bin/TextureFromColorBuffer.class
+cmsc405/eclipse/test-jogl/bin/textures/brick001.jpg
+cmsc405/eclipse/test-jogl/bin/textures/Earth-1024x512.jpg
+cmsc405/eclipse/test-jogl/bin/textures/mandelbrot.jpeg
+cmsc405/eclipse/test-jogl/bin/textures/marble.jpg
+cmsc405/eclipse/test-jogl/bin/textures/metal003.gif
+cmsc405/eclipse/test-jogl/bin/textures/NightEarth-512x256.jpg
+cmsc405/eclipse/test-jogl/bin/textures/README.txt
+cmsc405/eclipse/test-jogl/bin/textures/Thumbs.db
+cmsc405/eclipse/test-jogl/bin/UnlitCube.class
+cmsc405/eclipse/test-jogl/src/Camera.java
+cmsc405/eclipse/test-jogl/src/CartAndWindmillJogl2D.java
+cmsc405/eclipse/test-jogl/src/ColorCubeOfSpheres.java
+cmsc405/eclipse/test-jogl/src/CubesWithVertexArrays.java
+cmsc405/eclipse/test-jogl/src/FirstTriangle.java
+cmsc405/eclipse/test-jogl/src/FourLights.java
+cmsc405/eclipse/test-jogl/src/IFSPolyhedronViewer.java
+cmsc405/eclipse/test-jogl/src/JoglStarter.java
+cmsc405/eclipse/test-jogl/src/Polyhedron.java
+cmsc405/eclipse/test-jogl/src/TextureDemo.java
+cmsc405/eclipse/test-jogl/src/TexturedShapes.java
+cmsc405/eclipse/test-jogl/src/TextureFromColorBuffer.java
+cmsc405/eclipse/test-jogl/src/textures/brick001.jpg
+cmsc405/eclipse/test-jogl/src/textures/Earth-1024x512.jpg
+cmsc405/eclipse/test-jogl/src/textures/mandelbrot.jpeg
+cmsc405/eclipse/test-jogl/src/textures/marble.jpg
+cmsc405/eclipse/test-jogl/src/textures/metal003.gif
+cmsc405/eclipse/test-jogl/src/textures/NightEarth-512x256.jpg
+cmsc405/eclipse/test-jogl/src/textures/README.txt
+cmsc405/eclipse/test-jogl/src/textures/Thumbs.db
+cmsc405/eclipse/test-jogl/src/UnlitCube.java
