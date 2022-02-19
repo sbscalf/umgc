@@ -1,0 +1,75 @@
+<html>
+
+<head>
+
+  <title>Scalf Homework 3</title>
+
+  <style>
+    body {
+      position: relative;
+      width: 100%;
+      display: block;
+      text-align: center;
+      background-color: 999999;
+    }
+
+    body #content {
+      margin: auto;
+      width: 800px;
+      display: block;
+      overflow: auto;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <h1>Project 3: Three.js Project</h1>
+  <div id="content">
+    <h4>Controls</h4>
+    <p>Left-Click: Rotate &emsp; Right-Click: Move &emsp; Wheel: Zoom In/Out</p>
+    <form>
+      <input type="checkbox" id="switch1" checked>Light 1
+      &emsp;&emsp;&emsp;&emsp;&emsp;
+      <input type="checkbox" id="switch2" checked>Light 2
+      <br/><br/>
+      <select id="color1">
+        <option value="WHITE">White</option>
+        <option value="RED">Red</option>
+        <option value="GREEN">Green</option>
+        <option value="BLUE">Blue</option>
+        <option value="YELLOW">Yellow</option>
+        <option value="BLACK">Black</option>
+      </select>
+      &emsp;&emsp;&emsp;&emsp;&emsp;
+      <select id="color2">
+        <option value="WHITE">White</option>
+        <option value="RED">Red</option>
+        <option value="GREEN">Green</option>
+        <option value="BLUE">Blue</option>
+        <option value="YELLOW">Yellow</option>
+        <option value="BLACK">Black</option>
+      </select>
+      <br/><br/>
+      <input type="range" min="0" max="5" value="2" step="0.1" id="intensity1">
+      &emsp;&emsp;&emsp;&emsp;&emsp;
+      <input type="range" min="0" max="5" value="2" step="0.1" id="intensity2">
+    </form>
+    <script src="js/three.min.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/scalf-homework3.js"></script>
+
+  </div>
+  <br/>
+  <hr>
+  <footer>
+    <h3>Samuel Scalf</h3>
+    <h5>School of Cybersecurity and Information Technology, University of Maryland Global Campus</h5>
+    <h5>CMSC 405: Computer Graphics</h5>
+    <h5>Dr. Cynthia V. Marcello</h5>
+    <h5>22 February 2022</h5>
+  </footer>
+</body>
+
+</html>
