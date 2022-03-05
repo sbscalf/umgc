@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+<title>Scalf Homework 4</title>
+<style>
+    body {
+        background-color: #EEEEEE;
+    }
+    label {
+        white-space: pre;
+        margin-left: 25px;
+    }
+</style>
+
+<!-- This shader is exactly as provided -->
+
+<script type="x-shader/x-vertex" id="vshader-source">
+    attribute vec3 a_coords;
+    attribute vec3 a_normal;
+    uniform mat4 modelview;
+    uniform mat4 projection;
+    varying vec3 v_normal;
+    varying vec3 v_eyeCoords;
+    void main() {
+        vec4 coords = vec4(a_coords,1.0);
+        vec4 eyeCoords = modelview * coords;
+        gl_Position = projection * eyeCoords;
+        v_normal = normalize(a_normal);
+        v_eyeCoords = eyeCoords.xyz/eyeCoords.w;
+    }
+</script>
+
+<!-- This shader has simplified lighting model and equation
+Notice the light only has 3 properties now -->
+<script type="x-shader/x-fragment" id="fshader-source">
+    #ifdef GL_FRAGMENT_PRECISION_HIGH
+       precision highp float;
+    #else
+       precision mediump float;
+    #endif
+    struct MaterialProperties {
+        vec4 diffuseColor;
+        vec3 specularColor;
+        vec3 emissiveColor;
+        float specularExponent;
+    };
+    struct LightProperties {
+        bool enabled;
+        vec4 position;
+        vec3 color;
+    };
+    uniform MaterialProperties material; // do two-sided lighting, but assume front and back materials are the same
+    uniform LightProperties lights[4];
+    uniform mat3 normalMatrix;
+    varying vec3 v_normal;
+    varying vec3 v_eyeCoords;
+
+    vec3 lightingEquation( LightProperties light, MaterialProperties material,
+                                vec3 eyeCoords, vec3 N, vec3 V ) {
+           // N is normal vector, V is direction to viewer.
+        vec3 L, R; // Light direction and reflected light direction.
+        if ( light.position.w == 0.0 ) {
+            L = normalize( light.position.xyz );
+        }
+        else {
+            L = normalize( light.position.xyz/light.position.w - v_eyeCoords );
+        }
+        if (dot(L,N) <= 0.0) {
+            return vec3(0.0);
+        }
+        vec3 reflection = dot(L,N) * light.color * material.diffuseColor.rgb;
+        R = -reflect(L,N);
+        if (dot(R,V) > 0.0) {
+            float factor = pow(dot(R,V),material.specularExponent);
+            reflection += factor * material.specularColor * light.color;
+        }
+         return reflection;
+
+    }
+    void main() {
+        vec3 normal = normalize( normalMatrix*v_normal );
+        vec3 viewDirection = normalize( -v_eyeCoords);  // (Assumes a perspective projection.)
+        vec3 color = material.emissiveColor;
+
+        for (int i = 0; i < 4; i++) {
+            if (lights[i].enabled) {
+                if (gl_FrontFacing) {
+                    color += lightingEquation( lights[i], material, v_eyeCoords,
+                                                    normal, viewDirection);
+                }
+                else {
+                    color += lightingEquation( lights[i], material, v_eyeCoords,
+                                                    -normal, viewDirection);
+                }
+            }
+        }
+
+        gl_FragColor = vec4(color,material.diffuseColor.a);
+    }
+</script>
+
+<script src="gl-matrix-min.js"></script>
+<script src="trackball-rotator.js"></script>
+<script src="basic-object-models-IFS.js"></script>
+<script src="scalf-homework4.js" defer></script>
+<style>
+    body {
+        position: relative;
+        width: 100vw;
+        display: block;
+        text-align: center;
+        background-color: #999999;
+    }
+    body #content {
+        width: 80vw;
+        margin: auto;
+        display: block;
+        overflow: auto;
+    }
+    .form {
+        display: flex;
+        justify-content: center;
+    }
+    #webglcanvas {
+        width: 100%;
+        min-height: 400px;
+    }
+</style>
+</head>
+<body>
+    <h1>Project 4: WebGL 3D Project</h1>
+    <div id="content">
+        <h1>Not-to-Scale Model of the Solor System</h1>
+        <noscript><hr><h3>This page requires Javascript and a web browser that supports WebGL</h3><hr></noscript>
+        <h2>Controls</h2>
+
+        <p id="message">
+            <strong>Click and drag to rotate the view.</strong><br>
+            Changing the speed can cause a rewind or fast-forwared effect.
+        </p>
+        <div class="form">
+            <form>
+                Animation<br>
+                <input
+                    type="checkbox"
+                    id="animCheck"
+                    onchange="setAnimating(this.checked)"
+                />
+            </form>
+            &emsp;
+            <form >
+                Speed<br>
+                <input
+                    type="range"
+                    id="speedSlider"
+                    min="0.01"
+                    max="1"
+                    value="0.5"
+                    step="0.01"
+                    style="width:100px;"
+                />
+            </form>
+            &emsp;
+            <form >
+                Scale<br>
+                <input
+                    type="range"
+                    id="scaleSlider"
+                    min="0.3"
+                    max="3"
+                    value="0.3"
+                    step="0.1"
+                    style="width:100px;"
+                    onchange="draw()"
+                />
+            </form>
+            &emsp;
+            <form>
+                Sunlight<br>
+                <input
+                    type="checkbox"
+                    id="sun"
+                    onchange="setSunlight(this.checked)" checked
+                />
+            </form>
+        </div>
+
+        <button id="reset">Reset</button>
+        <hr>
+
+        <canvas id="webglcanvas" style="background-color:blue"></canvas>
+    </div>
+    <hr>
+    <footer>
+        <h3>Samuel Scalf</h3>
+        <h5>School of Cybersecurity and Information Technology, University of Maryland Global Campus</h5>
+        <h5>CMSC 405: Computer Graphics</h5>
+        <h5>Dr. Cynthia V. Marcello</h5>
+        <h5>8 March 2022</h5>
+    </footer>
+</body>
+</html>
